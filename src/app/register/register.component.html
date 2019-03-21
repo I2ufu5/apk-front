@@ -1,0 +1,43 @@
+
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="col s5">
+                <img src="http://tvstudent.pl/wp-content/uploads/2016/11/2010_-_Logo_WEiI.-600x176.jpg"
+             style="width:90%;height:80%;" class="offset-s3">
+      </div>
+      <div class="col s2">
+
+      </div>
+      <div class="col s5">
+        <img src="https://w.prz.edu.pl/fcp/8GBUKOQtTKlQhbx08SlkTVgRLUWRuHQwFDBoIVURNWHlSFVZpCFghUHcKVigEQUw/509/flawonoidy/images/prz_pozytyw_300.jpg"
+             style="width:90%;height:80%;" class="offset-s3">
+      </div>
+      <div class="col s6">
+          <h5>Zaloguj się do serwisu</h5>
+    </div>
+      <div class="card-content">
+          <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Password.value,Email.value)">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mail_outline</i>
+                <input type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
+                <label>Podaj email poczty sutdenckiej</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">vpn_key</i>
+                <input type="password" name="Name" #Password ngModel required>
+                <label>Podaj hasło</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start</button>
+              </div>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
